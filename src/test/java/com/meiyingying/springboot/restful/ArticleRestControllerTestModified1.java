@@ -1,4 +1,4 @@
-package com.meiyingying.springboot;
+package com.meiyingying.springboot.restful;
 
 import com.meiyingying.springboot.controller.ArticleRestController;
 import com.meiyingying.springboot.service.ArticleRestService;

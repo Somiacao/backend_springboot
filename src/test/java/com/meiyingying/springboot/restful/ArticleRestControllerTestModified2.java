@@ -1,4 +1,4 @@
-package com.meiyingying.springboot;
+package com.meiyingying.springboot.restful;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.meiyingying.springboot.controller.ArticleRestController;
