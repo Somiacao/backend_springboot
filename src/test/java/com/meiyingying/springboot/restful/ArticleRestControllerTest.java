@@ -35,8 +35,8 @@ public class ArticleRestControllerTest {
                 " \"reader\" : [{\"name\": \"曹红梅\", \"age\":18}, {\"name\":\"张政豪\",\"age\":18}]\n"+
                 "}";
 //        模拟发送网络请求
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.request(HttpMethod.POST, "/rest/article")
-        .contentType("application/json").content(article))
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.post("/rest/article")
+                .contentType("application/json").content(article))
 //                时间解析有问题
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.data.reader[0].age").value(18))

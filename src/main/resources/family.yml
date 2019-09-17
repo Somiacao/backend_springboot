@@ -1,0 +1,28 @@
+# 1、一个家庭有爸爸妈妈孩子
+# 2、这个家庭有一个名字（family-name）叫做“happy family”
+# 3、爸爸有名字和年龄
+# 4、妈妈有两个别名
+# 5、孩子除了name和age还有friends的集合
+# 6、每个friends有两个属性：hobby和sex
+family:
+  #  使用双引号显示happy 换行 family
+  family-name: ENC(IRsJC+pvqIIMFphXTwKX6+Il18XBLpoP)
+  # "happy \n family"
+  #  使用''显示happy \n family
+  #  family-name: 'happy \n family'
+
+  father:
+    name: meiyingying
+    age: 17
+  mother:
+    alias:
+      - lovly
+      - alices
+  child:
+    name: kobe
+    age: ${family.father.age:5}
+    friends:
+      - hobby: football
+        sex: male
+      - hobby: dancing
+        sex: female

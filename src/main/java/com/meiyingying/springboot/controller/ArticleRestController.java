@@ -31,12 +31,14 @@ public class ArticleRestController {
             @ApiResponse(code = 500, message = "系统内部错误", response = AjaxResponse.class)
 
     })
-    @PostMapping(value = "/article",  produces = "application/json")
+
+
+    @PostMapping(value = "/article")
     @ResponseBody
     public AjaxResponse saveArticle(@RequestBody Article article){
         log.info("saveArticle:{}",article);
 
-        log.info("articleRestService return:",articleRestService.saveArtice(article));
+//        log.info("articleRestService return:",articleRestService.saveArtice(article));
 
         return AjaxResponse.success(article);
     }

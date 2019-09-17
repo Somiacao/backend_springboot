@@ -31,4 +31,5 @@ public class Article {
 
     private List<Reader> reader;
 
+
 }
