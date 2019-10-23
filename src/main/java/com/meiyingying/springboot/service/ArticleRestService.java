@@ -1,7 +1,6 @@
 package com.meiyingying.springboot.service;
 
-import com.meiyingying.springboot.model.AjaxResponse;
-import com.meiyingying.springboot.model.Article;
+import com.meiyingying.springboot.model.ArticleVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -9,8 +8,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ArticleRestService {
 
-    public String saveArtice(Article article){
-        log.info("saveArticle:{}",article);
+    public String saveArtice(ArticleVO articleVO){
+        log.info("saveArticle:{}", articleVO);
         return "测试";
     }
 

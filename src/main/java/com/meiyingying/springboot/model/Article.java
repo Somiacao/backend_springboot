@@ -15,7 +15,7 @@ import java.util.List;
 @Builder
 // 改变json字符串体内的顺序
 @JsonPropertyOrder(value = {"content", "title"})
-public class Article {
+public class ArticleVO {
 //    排除属性不做序列化操作
     @JsonIgnore
     private long id;

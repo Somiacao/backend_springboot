@@ -1,8 +1,7 @@
 package com.meiyingying.springboot.restful;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.meiyingying.springboot.controller.ArticleRestController;
-import com.meiyingying.springboot.model.Article;
+import com.meiyingying.springboot.model.ArticleVO;
 import com.meiyingying.springboot.service.ArticleRestService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -19,7 +18,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import javax.annotation.Resource;
 
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @Slf4j
@@ -53,11 +51,11 @@ public class ArticleRestControllerTestModified2 {
                 " \"reader\" : [{\"name\": \"曹红梅\", \"age\":18}, {\"name\":\"张政豪\",\"age\":18}]\n"+
                 "}";
         ObjectMapper objectMapper = new ObjectMapper();
-        Article article1 = objectMapper.readValue(article, Article.class);
-//        articleRestService.saveArtice(article1);
+        ArticleVO articleVO1 = objectMapper.readValue(article, ArticleVO.class);
+//        articleRestService.saveArtice(articleVO1);
 
 //        打桩
-        when( articleRestService.saveArtice(article1)).thenReturn("ok");
+//        when( articleRestService.saveArtice(articleVO1));
 
 //        模拟发送网络请求
         MvcResult result = mockMvc.perform(MockMvcRequestBuilders.request(HttpMethod.POST, "/rest/article")
